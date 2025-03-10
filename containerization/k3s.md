@@ -29,14 +29,14 @@ Next, the following ports were open on the secondary node:
 ```
 	sudo ufw allow 22/tcp        # SSH
 	sudo ufw allow 8472/udp      # Flannel VXLAN
-    sudo ufw allow 10250/tcp     # Kubelet port
+        sudo ufw allow 10250/tcp     # Kubelet port
 ```
 
 Once this has been installed, we run the system updates on both machines: 
 ```
 	sudo apt-get update
 	sudo apt-get upgrade -y
-    sudo reboot
+        sudo reboot
 ```
 
 Please note that 22 is associated with the ssh protocol, 8472 is associated with k8s networking model by attaching IP addresses to containers and using virtual extension lan (VXLAN) to provide network connectivity. 
