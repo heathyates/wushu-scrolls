@@ -15,7 +15,6 @@ allowing the reader the ability to install kubernetes with a single binary. Comp
 This walkthrough assumes a primary node and a secondary node. If the reader has more secondary nodes, it is beyond the scope of this documentation. However, it should in principle be a variation of a theme and the steps for secondary node is duplicated for any arbitrary amount of nodes. 
 
 
-
 ## Pre-requisites 
 
 The following ports were allowed on the primary node: 
@@ -30,15 +29,18 @@ Next, the following ports were open on the secondary node:
 ```
 	sudo ufw allow 22/tcp        # SSH
 	sudo ufw allow 8472/udp      # Flannel VXLAN
-  sudo ufw allow 10250/tcp     # Kubelet port
+    sudo ufw allow 10250/tcp     # Kubelet port
 ```
 
 Once this has been installed, we run the system updates on both machines: 
 ```
 	sudo apt-get update
 	sudo apt-get upgrade -y
-  sudo reboot
+    sudo reboot
 ```
+
+Please note that 22 is associated with the ssh protocol, 8472 is associated with k8s networking model by attaching IP addresses to containers and using virtual extension lan (VXLAN) to provide network connectivity. 
+The kubelet is a node agent that runs on each node. 
 
 ## K3s Installation 
 
@@ -55,11 +57,17 @@ The following will confirm it has been installed:
 sudo k3s kubectl get nodes
 ````
 
-Second, obtain the token for the secondary node as follows: 
+Second, obtain the token for the secondary node as follows while on the primary node: 
 
 ```
 sudo cat /var/lib/rancher/k3s/server/node-token
 ````
+
+Third, take that token and add it to the secondary node as follows: 
+```
+curl -sfL https://get.k3s.io | K3S_URL=https://192.168.1.10:6443 K3S_TOKEN=K10abc::server:xyz sh -
+```
+
 
 
 ## K3 Common Issues 
