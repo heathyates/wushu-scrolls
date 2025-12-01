@@ -26,8 +26,12 @@ intended to me an audience of one, myself. However, they are open source in hope
 
 This is homage to Chinese traditional culture. 
 
-In brief, Wushu is a traditional Chinese martial art that is thousands of years old. It is umbrella term to encompass a plethora of martial art techniques such as striking, grappling, and other weapon based forms. In other words, the foundations of the Wushu art. 
-The author has no competence with actual Wushu arts, but has adopted this term for the repo out of respect for this artform. Building on that, scrolls in China was the traditional mechanism to perserve and transmit core martial art knowledge. These scrolls 
+In brief, [Wushu](https://en.wikipedia.org/wiki/Wushu_(sport)) is a traditional Chinese martial art that is thousands of years old. It is umbrella term to encompass a plethora of martial art techniques such as striking, grappling, and other weapon based forms. In other words, the foundations of the Wushu art. 
+
+The author has no experience or competence with actual Wushu arts, but has adopted this term out of respect for Chinese culture and how martial arts is still practiced in current times. In the era of industrialization and automation of both human muscle and thought, this invokes how the user can still leverage this documentation 
+
+
+for the repo out of respect for this artform. Building on that, scrolls in China was the traditional mechanism to perserve and transmit core martial art knowledge. These scrolls 
 typically contained detailed descriptions of techniques and philosophical undertones teaching concepts related to Wushu. The intent was typically not to teach something aggressive, but a form of discipline aimed at personal growth and harmony. 
 
 
